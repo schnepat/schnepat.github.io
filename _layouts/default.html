@@ -14,20 +14,20 @@
 
 <body>
 
-  <!-- ===== Header Section ===== -->
+  <!-- ===== Header ===== -->
   <header>
     <h1>{{ site.author.name }}</h1>
     <p>{{ site.title }}</p>
   </header>
 
-  <!-- ===== Navigation Bar ===== -->
+  <!-- ===== Navigation ===== -->
   <nav>
     {% for item in site.navbar %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
     {% endfor %}
   </nav>
 
-  <!-- ===== Main Page Content ===== -->
+  <!-- ===== Main Content ===== -->
   <main>
     {{ content }}
   </main>
@@ -40,10 +40,10 @@
     
   </footer>
 
-  <!-- ===== Theme Toggle Button ===== -->
+  <!-- ===== Dark Mode Toggle ===== -->
   <button class="toggle-theme" id="theme-toggle">🌓</button>
 
-  <!-- ===== Theme Toggle Script ===== -->
+  <!-- ===== Toggle Script ===== -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
