@@ -10,3 +10,4 @@ title: "Contact"
 💻 **GitHub:** [GitHub Profile]({{ site.author.github }})  
 
 You can also reach out to discuss collaborations, cloud deployments, or AI-based industrial analytics.
+
