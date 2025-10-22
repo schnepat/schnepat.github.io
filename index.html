@@ -3,29 +3,12 @@ layout: default
 title: "Home"
 ---
 
-<header>
-  <h1>{{ site.author.name }}</h1>
-  <p>{{ site.title }}</p>
-</header>
+<h2>Welcome!</h2>
+<p>{{ site.description }}</p>
 
-<nav>
-  {% for item in site.navbar %}
-    <a href="{{ item.url }}">{{ item.title }}</a>
-  {% endfor %}
-</nav>
-
-<main>
-  <h2>Welcome!</h2>
-  <p>{{ site.description }}</p>
-
-  <h3>Highlighted Projects</h3>
-  <ul>
-    <li><a href="/projects#packaging">📦 Packaging Defect Detection System</a></li>
-    <li><a href="/projects#flashcard">🧠 AI Flashcard Web App</a></li>
-    <li><a href="/projects#quantum">🔬 Quantum Networking Research</a></li>
-  </ul>
-</main>
-
-<footer>
-  © {{ site.time | date: "%Y" }} {{ site.author.name }}
-</footer>
+<h3>Highlighted Projects</h3>
+<ul>
+  <li><a href="/projects#packaging"> Packaging Defect Detection System</a></li>
+  <li><a href="/projects#flashcard"> AI Flashcard Web App</a></li>
+  <li><a href="/projects#quantum"> Quantum Networking Research</a></li>
+</ul>
