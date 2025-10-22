@@ -1,52 +1,141 @@
-body {
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background-color: #f8f9fa;
-  color: #222;
-  margin: 0;
-  padding: 0;
+/* ===== Root Variables ===== */
+:root {
+  --primary: #004aad;
+  --accent: #00b4d8;
+  --bg: #f8f9fa;
+  --text: #222;
+  --card-bg: #ffffff;
 }
 
+/* Dark mode variables */
+[data-theme="dark"] {
+  --primary: #6ca8ff;
+  --accent: #58a6ff;
+  --bg: #0d1117;
+  --text: #e6edf3;
+  --card-bg: #161b22;
+}
+
+/* ===== Global Styles ===== */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* ===== Header ===== */
 header {
-  background: #004aad;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
   text-align: center;
-  padding: 2.5rem 1rem;
+  padding: 3rem 1rem;
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
 }
 
+header p {
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* ===== Navigation ===== */
 nav {
-  background: #003f8a;
+  background: var(--primary);
   text-align: center;
-  padding: 0.8rem;
+  padding: 0.75rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
   color: white;
-  margin: 0 1rem;
   text-decoration: none;
+  margin: 0 1rem;
   font-weight: 500;
+  transition: opacity 0.3s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  opacity: 0.75;
 }
 
+/* ===== Content ===== */
 main {
   max-width: 900px;
   margin: 2rem auto;
   padding: 0 1rem;
+  line-height: 1.6;
 }
 
+/* ===== Cards (used in project pages) ===== */
+.project-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Footer ===== */
 footer {
-  background: #222;
+  background: var(--primary);
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.2rem;
   font-size: 0.9rem;
   margin-top: 2rem;
 }
 
+/* ===== Dark Mode Toggle ===== */
+.toggle-theme {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--accent);
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s;
+}
+.toggle-theme:hover {
+  opacity: 0.8;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav a {
+    display: inline-block;
+    margin: 0.3rem 0.6rem;
+  }
+}
