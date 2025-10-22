@@ -1,0 +1,52 @@
+# -------------------------------
+#  Patrick Schneider | GitHub Pages Configuration
+# -------------------------------
+
+title: "Patrick Schneider | Data & Cloud Engineer"
+description: >
+  Portfolio showcasing AI, Cloud, and Quality Systems projects developed at Schreiber Foods
+  and Grand Valley State University (MACS). Focus areas include computer vision, cloud
+  infrastructure, and data analytics for industrial process optimization.
+
+# Base URL of your site (leave empty for root domain)
+baseurl: ""
+
+# The full URL to your site (update if you add a custom domain later)
+url: "https://patrickschneider.github.io"
+
+# Author Information
+author:
+  name: "Patrick Schneider"
+  email: "patrickschneider@email.com"
+  linkedin: "https://linkedin.com/in/patrickschneider"
+  github: "https://github.com/patrickschneider"
+
+# Theme (optional – uncomment if you later switch to a Jekyll layout)
+# theme: minima
+
+# Social links (customizable)
+social_links:
+  - name: "GitHub"
+    url: "https://github.com/patrickschneider"
+  - name: "LinkedIn"
+    url: "https://linkedin.com/in/patrickschneider"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from the site build (optional)
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+
+# -------------------------------
+#  Optional metadata for SEO
+# -------------------------------
+plugins:
+  - jekyll-seo-tag
+
+# Enable Google Analytics or other future integrations if desired
+# google_analytics: UA-XXXXXXXXX-X
