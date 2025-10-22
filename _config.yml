@@ -7,11 +7,10 @@ theme: minima
 
 author:
   name: "Patrick Schneider"
-  email: "patrickschneider@email.com"
-  linkedin: "https://linkedin.com/in/patrickschneider"
+  email: "schnepat@mail.gvsu.edu"
+  linkedin: "https://www.linkedin.com/in/patrick-schneider-7919b050"
   github: "https://github.com/patrickschneider"
 
-# Navigation links for all pages
 navbar:
   - title: "Home"
     url: "/"
@@ -22,7 +21,6 @@ navbar:
   - title: "Contact"
     url: "/contact"
 
-# Plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
