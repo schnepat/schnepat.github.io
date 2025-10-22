@@ -1,50 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
+  <title> {{ page.title }} | {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
 
 <body>
+
+  <!-- ===== Header Section ===== -->
   <header>
     <h1>{{ site.author.name }}</h1>
     <p>{{ site.title }}</p>
   </header>
 
+  <!-- ===== Navigation Bar ===== -->
   <nav>
     {% for item in site.navbar %}
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
     {% endfor %}
   </nav>
 
+  <!-- ===== Main Page Content ===== -->
   <main>
     {{ content }}
   </main>
 
+  <!-- ===== Footer ===== -->
   <footer>
     © {{ site.time | date: "%Y" }} {{ site.author.name }}
     • <a href="{{ site.author.github }}">GitHub</a> |
       <a href="{{ site.author.linkedin }}">LinkedIn</a>
     
   </footer>
+
+  <!-- ===== Theme Toggle Button ===== -->
   <button class="toggle-theme" id="theme-toggle">🌓</button>
-<script>
-  const toggle = document.getElementById('theme-toggle');
-  const root = document.documentElement;
-  const savedTheme = localStorage.getItem('theme');
 
-  if (savedTheme) root.setAttribute('data-theme', savedTheme);
+  <!-- ===== Theme Toggle Script ===== -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
 
-  toggle.addEventListener('click', () => {
-    const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
-</script>
+    if (savedTheme) root.setAttribute('data-theme', savedTheme);
+
+    toggle.addEventListener('click', () => {
+      const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  </script>
 
 </body>
 </html>
