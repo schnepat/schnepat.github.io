@@ -7,7 +7,7 @@
   --card-bg: #ffffff;
 }
 
-/* Dark mode variables */
+/* Dark mode */
 [data-theme="dark"] {
   --primary: #6ca8ff;
   --accent: #58a6ff;
@@ -16,7 +16,7 @@
   --card-bg: #161b22;
 }
 
-/* ===== Global Styles ===== */
+/* ===== Global ===== */
 body {
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg);
@@ -45,7 +45,7 @@ header p {
   margin-top: 0.5rem;
 }
 
-/* ===== Navigation ===== */
+/* ===== Nav ===== */
 nav {
   background: var(--primary);
   text-align: center;
@@ -67,7 +67,7 @@ nav a:hover {
   opacity: 0.75;
 }
 
-/* ===== Content ===== */
+/* ===== Main ===== */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -75,7 +75,7 @@ main {
   line-height: 1.6;
 }
 
-/* ===== Cards (used in project pages) ===== */
+/* ===== Project Cards ===== */
 .project-card {
   background: var(--card-bg);
   padding: 1.5rem;
@@ -110,7 +110,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* ===== Dark Mode Toggle ===== */
+/* ===== Theme Toggle ===== */
 .toggle-theme {
   position: fixed;
   bottom: 20px;
@@ -125,17 +125,10 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s;
 }
-.toggle-theme:hover {
-  opacity: 0.8;
-}
+.toggle-theme:hover { opacity: 0.8; }
 
 /* ===== Responsive ===== */
 @media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
-  }
-  nav a {
-    display: inline-block;
-    margin: 0.3rem 0.6rem;
-  }
+  header h1 { font-size: 1.8rem; }
+  nav a { display: inline-block; margin: 0.3rem 0.6rem; }
 }
