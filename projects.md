@@ -15,7 +15,7 @@ Developed an edge AI solution for detecting packaging deformities using **YOLOv8
 ##  AI Flashcard Web App {#flashcard}
 Flask-based app hosted on **Google App Engine**, integrating **Vertex AI (Gemini)** to generate study Q&A stored in Firestore.  
 **Tech:** Python, Flask, Firestore, GCP  
-[View Repository](https://github.com/patrickschneider/flashcard-ai-app)
+[View Repository](https://github.com/schnepat/Cloud-flashcard-application)
 
 ---
 
